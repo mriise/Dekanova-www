@@ -1,0 +1,63 @@
+h1 {
+    letter-spacing: .8rem;
+    text-align: center;
+}
+.center {
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    padding: 10px;
+}
+
+h1, h2, h3, h4, a {
+    font-family: 'Plat Nomor', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+}
+
+.link-effect a {
+    font-family: 'Courier New', Courier, monospace;
+	margin: auto;
+	text-shadow: none;
+	position: relative;
+    text-decoration: none;
+    font-size: larger;
+
+}
+
+.link-effect a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	max-width: 0;
+	border-bottom: 2px solid #9F0000;
+	color: #9F0000;
+    font-weight: bold;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.3s;
+	-moz-transition: max-width 0.3s;
+	transition: max-width 0.3s;
+}
+
+.link-effect a:hover::before {
+	max-width: 100%;
+}
