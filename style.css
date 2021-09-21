@@ -3,11 +3,14 @@ h1 {
     text-align: center;
 }
 
-.center {
-    margin: auto;
-    margin-top: 100px;
-    width: 50%;
-    padding: 10px;
+.title {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.anim {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 @font-face {
@@ -29,6 +32,13 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
 nav ul {
@@ -67,3 +77,35 @@ nav ul {
 .link-effect a:hover::before {
 	max-width: 100%;
 }
+
+@-webkit-keyframes svg-text-anim {
+    40% {
+       stroke-dashoffset: 0;
+       fill: transparent;
+     }
+     60% {
+       stroke-dashoffset: 0;
+       fill: #ffffff;
+     }
+     100% {
+       stroke-dashoffset: 0;
+       fill: #ffffff;
+     }
+     
+ }
+ /* Most browsers */
+ @keyframes svg-text-anim {
+    40% {
+       stroke-dashoffset: 0;
+       fill: transparent;
+     }
+     60% {
+       stroke-dashoffset: 0;
+       fill: #ffffff;
+     }
+     100% {
+       stroke-dashoffset: 0;
+       fill: #ffffff;
+     }
+     
+ }
